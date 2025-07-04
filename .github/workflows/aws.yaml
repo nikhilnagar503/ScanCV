@@ -47,7 +47,7 @@ jobs:
       - name: Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
-          task-definition: resume-task  # we'll generate this
+          task-definition: .github/task-definitions/resume-task.json  # we'll generate this
           service: resume-task-service-fezwi25q
           cluster: spirited-cat-b0e0s9
           wait-for-service-stability: true
